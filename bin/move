@@ -7,7 +7,10 @@ require_relative '../lib/move.rb'
 #welcoming user with puts 
 puts "Welcome to Tic Tac Toe!"
 
+#1st have to all variables that are then going
+#to be used as arguments in move method
 # wrote a variable with a blank board using an array with 9 elements
+
 board = [
   " ", " ", " ",
   " ", " ", " ",
@@ -16,15 +19,22 @@ board = [
 
 puts "Where would you like to go?"
 
+#below created variable input for direct user input
+#strip strips whitespace 
+#gets is opposite of puts, will get user input instead of 
+#showing something to the user 
 input = gets.strip
 
 # have to include argument because there is no default or blank
+#in original definition
 
 index = input_to_index(input)
 
+#X is used because in tic tac toe, X always starts first
 character = "X"
 
-#have to define arguments
+#calling our method
 move(board, index, character)
 
+#calling our method in order to display the board
 display_board(board)
